@@ -7,10 +7,12 @@
         </div>
 
         <div class="filter__wrap">
-            <h1>Вывод</h1>
-            <!-- <ul  v-for="book in genre" :key="book">
-                <li>{{book}}</li>
-            </ul> -->
+            <h1>Все книги</h1>
+            <ul >
+                <li v-for="book in books" :key="book.id">{{allBook(book)}}</li>
+            </ul>
+
+            <h1>Фильтрация</h1>
             <p ref="listBook"></p>
         </div>
 
@@ -23,7 +25,7 @@
 export default {
     data() {
         return {
-            
+           
         }
     },
     computed: {
@@ -32,12 +34,19 @@ export default {
         }
     },
     methods: {
+        allBook(str) {
+            let strFormat = '';
+            str.forEach(element => {
+                strFormat += element + ' ' 
+            });
+
+            return strFormat;
+        },
         arrGenre() {
             let genre = this.books.genre;
             let strGenre = '';
 
             genre.forEach(element => {
-                console.log(element)
                 strGenre += element + ' ' 
             });
             
@@ -48,7 +57,6 @@ export default {
             let strAvtor = '';
 
             avtor.forEach(element => {
-                console.log(element)
                 strAvtor += element + ' ' 
             });
             
