@@ -1,7 +1,8 @@
 <template>
   <div>
-      <p>d</p>
-      <h1> {{count}} </h1>
+    <p>Счетчик</p>
+    <h1> {{count}} </h1>
+
     <button @click='increment'> Увеличить </button>
        
   </div>

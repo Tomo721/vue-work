@@ -7,7 +7,7 @@
         <input v-model="messagea">
         <p>{{ messagea }}</p> -->
 
-        <app-button/>
+        <appfilter/>
 
   </div>
 </template>
@@ -23,7 +23,7 @@ export default {
         
     },
     components:{
-        appButton: () => import('@/components/AppButton'),
+        appfilter: () => import('@/components/filter'),
         // Counter: () => import('@/components/Counter'),
     },
   
